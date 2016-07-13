@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/theme/css/foundation.min.css" media="all">
+        <script type="text/javascript" src="/theme/js/modernizr.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/theme/css/lamboz.css" media="all">
+        <title>Pelican Prerequisites - Constructing an Empire</title>
+        <meta charset="utf-8" />
+        
+</head>
+<body>
+    <div class="pages">
+        <ul>
+            <li class="home"><a href="/index.html">Home</a></li>
+            <li ><a href="/pages/about me page.html">About Me</a></li>
+        </ul>
+    </div>
+<div class="hp-header-inner">
+    <div class="page-header">
+        <div class="content-header">
+            <div id="title-block">
+            <h1>  <a href="/prereqs for pelican.html" rel="bookmark"
+                    title="Permalink to Pelican Prerequisites">Pelican Prerequisites</a></h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content">
+		<link rel="stylesheet" type="text/css" href="./codehilite.css">
+        <div class="data-holder">
+        <div class="row">
+           <div class="large-10 content-column column">
+<div class="content-article">
+    <header class="header-article">
+        <div class="read-more">Posted on Fri 08 July 2016</div>
+ 
+   </header>
+    <section class='article'>
+        
+        <div class="entry-summary">
+            <p>Things to do before getting started</p>
+        </div>
+    
+        <div class="entry-content">
+            <p>I've put very little thought into this and have decided on an approach to take with this thing.  I'm going to write about my journey into Pelican as though I am Rufus and you are Bill S. Preston or Ted 'Theodore' Logan...whichever its up to you...depending on which lead guitar you like to play I guess.<br />
+<img src ="/images/Wyld_stallyns.jpg" width = "200"></p>
+<p>Anyway, I am going to keep this super simple and assume that nothing on your machine is prepared for the Pelican journey.  Something that I would have liked when I was getting started...</p>
+<p>Just as a disclaimer, alot of this is available at the <a href="docs.getpelican.com">Pelican</a> homepage.  I am going to try and break it down really simple but if I fail or leave something out  you can always refer to that site. </p>
+<p>I'm going to cover the software that you HAVE to install to make Pelican work and the stuff I recommend you install in order to make this all a little easier.</p>
+<h2>Foundation</h2>
+<p>Pelican uses <a href="www.python.org">Python</a> to create the web content that you will store on a server somewhere so in order to use Pelican you will need to make sure you have Python installed on your computer.  I personally use a Mac so Python was on my computer right out of the box (Version 2.7, but I have since upgraded to Version 3).  I'm not sure about PCs running windows.  The easiest way to check is to open up a terminal and type</p>
+<div class="highlight"><pre><span></span>python
+</pre></div>
+
+
+<p><br>
+If this works your prompt will change from a "&gt;" or "#" to a "&gt;&gt;&gt;" and you will see some information about your Python version.</p>
+<p>This is where I ran into the most problems.  Its possible for you to have to versions of python installed on your machine and have conflicts when you try and use one or the other or install packages, such as Pelican.  This typically occurs due to Path variable errors.  I'm not going to get into this now but just be careful.  If you are like me, an intelligent Mac owner, use a package manager like <a href="brew.sh">Homebrew</a> to install and update Python.</p>
+<h4>Pelican</h4>
+<p>If you installed the newest version of Python or are using a package manager you should have pip, a python specific package manager, installed on your computer.  Pip will make the installation of Pelican really easy.  Give this a try:</p>
+<div class="highlight"><pre><span></span>pip install pelican
+</pre></div>
+
+
+<p><br>
+This will install the following packages into you environment: feedgenerator, jinja2, pygments, docutils, pytz, blinker, unidecode. You should get a success message once the installation is complete.  </p>
+<p>That's really it.   </p>
+<h2>Recommendations</h2>
+<p>As I've said before, Pelican is very lightweight so you have many options when it comes to hosting.  You can setup a server if you so desire, or if you want to do it the way I found the most convenient try Github pages.  Github has alot of features, but in this case its an online repository where you can store your html so that you can display it on Github pages. </p>
+<h4>Github Setup</h4>
+<p>First you are going to want to head over to <a href="www.github.com">Github</a> and create an account if you don't already have one.  I find it alot easier to manage Github repositories (uploading files and managing updates) with a GUI.  On my Mac I use Github Desktop and it makes managing your blog really simple.  For a really easy to follow guide head to the <a href="https://pages.github.com">Github pages website</a>.</p>
+<p>Basically, all you have to do is create Github repository using the naming convention specified in the guide.  That repository shares the same name as your new blog.  When you run Pelican the output goes into a folder that you subsequently push into this repository.  I'll go over it again but its super simple.</p>
+<h4>Markdown Editor</h4>
+<p>Another piece of software I recommend is <a href="http://25.io/mou/">Mou</a>.  You can use any text/code editor you want but I really like Mou.  It has several really useful features. For one, as you write your blog and input Markdown syntax, one of the formats that Pelican uses to create blog posts, you get a real time preview in a split screen.  It is pretty awesome and makes writing posts really straight forward.  It even responds to html, so as I throw some code into a post to center or size a picture I get my realtime preview and have a good idea of how my output will look.  </p>
+<p>Mou is currently in beta, and I am pretty sure it only works on OS X.</p>
+<h4>MISC...</h4>
+<p>I've personally found a few other things useful.  I use Chrome as my browser for web development.  I find that the developer tools work better (cache isn't so finicky and I can dive into html if I need to).  I've also been trying out iTerm (a terminal interface) and so far I like it but its definitely not essential.  </p>
+<h2>Next Post</h2>
+<p>My next post is going to dive into the creation of my this blog.  I'll talk more about my lessons learned and the few issues I had.  There are several blogs and guides I had to comb through in order to develop a system that works.  I think what I have devised is pretty simple and straight forward...anyone can do it.  </p>
+        </div>
+    </section>
+    <footer class="footer-article">
+        <div class="tags-and-categories">Filed under <a href="/category/tech.html">Tech</a>
+        | Tagged: <a href="/tag/fun.html">fun </a><a href="/tag/tech.html">tech </a><a href="/tag/learning.html">learning </a>
+        | <a href="/prereqs for pelican.html" rel="bookmark"
+         title="Permalink to Pelican Prerequisites">Permalink</a>            
+        </div>
+        <!-- metaldata 
+        -->
+    </footer>
+    <!-- disqus  -->
+</div>
+            </div>
+            <div class="large-2 aside column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="http://www.setarehbeauty.com/">Setareh Beauty</a></li>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                </ul>
+            </div>
+         </div>
+    </div>
+</div>
+    <div class="footer">
+        <div class="data-holder">
+        <div class="row">
+            <div class="large-3 column">
+<div class="credits">
+    <h3>Stuff and credits</h3>
+    <p>
+    Proudly powered by <a href="http://getpelican.com/">Pelican</a>, 
+    which takes great advantage of <a href="http://python.org">Python</a>.
+    </p>
+    <p>
+    This site also makes use of <a href="http://foundation.zurb.com">Zurb Foundation Framework</a>
+    and is typeset using the blocky -- but quite good-looking indeed -- 
+    <a href="https://www.google.com/fonts/specimen/Exo%202">Exo 2</a> fonts,
+    which comes in a lot of weight and styles. 
+    </p>
+    <p>Enjoy!</a>
+</div>           </div>
+           <div class="large-6 tag-cloud column">
+                <h3>Tags</h3>
+                <ul>
+                    <li><a href="/tag/fun.html">fun</a>(3)</li>
+                    <li><a href="/tag/tech.html">tech</a>(3)</li>
+                    <li><a href="/tag/learning.html">learning</a>(3)</li>
+                </ul>
+            </div>
+            <div class="large-3 category-column column">
+                <h3>Categories</h3>
+                <ul>
+                    <li class="active"><a href="/category/tech.html">Tech</a> (3)</li>
+                </ul>
+             
+            </div>
+        </row>
+        </div>
+    </div>
+</body>
+</html>
